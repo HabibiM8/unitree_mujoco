@@ -245,12 +245,8 @@ def runner():
     # But for simplicity, let's just put everything in 0x0A. You can refine if needed.
     for i in range(NUM_MOTORS_H1):
         cmd.motor_cmd[i].mode = 0x0A  # position mode
-        if i == H1JointIndex.kRightAnkle or i == H1JointIndex.kLeftAnkle:
-            cmd.motor_cmd[i].kp = 300.0
-            cmd.motor_cmd[i].kd = 8.0
-        else:
-            cmd.motor_cmd[i].kp = 200.0
-            cmd.motor_cmd[i].kd = 5.0
+        cmd.motor_cmd[i].kp = 80.0
+        cmd.motor_cmd[i].kd = 5.0
         #print("Set Motors: Motor", i, "mode:", cmd.motor_cmd[i].mode)
 
     dt = 0.005
