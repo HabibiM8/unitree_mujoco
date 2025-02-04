@@ -307,4 +307,9 @@
     0 0 0 0
     0"/>
   </keyframe>
+  <equality>
+    <!-- This welds the pelvis body to the world so it can’t move -->
+    <weld body1="pelvis" body2="world" anchor="0 0 1.1" />
+</equality>
+
 </mujoco>
